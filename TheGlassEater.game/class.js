@@ -1,8 +1,8 @@
-class Grass {
+class LivingCreature{
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.energy = 10;
+
         this.directions = [
             [this.x - 1, this.y - 1],
             [this.x, this.y - 1],
@@ -13,6 +13,13 @@ class Grass {
             [this.x, this.y + 1],
             [this.x + 1, this.y + 1]
         ];
+    }
+}
+
+class Grass extends LivingCreature{
+    constructor(x, y) {
+        super(x,y)
+        this.energy = 10
     }
     chooseCell(char) {
         let result = [];
@@ -52,21 +59,11 @@ class Grass {
 }
 
 
-class GrassEater {
+class GrassEater extends LivingCreature{
     constructor(x, y) {
-        this.x = x;
-        this.y = y;
+        super(x,y)
         this.energy = 120;
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x + 1, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x + 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-        ];
+
     }
     getNewCordinates(){
               this.directions = [
@@ -178,21 +175,11 @@ class GrassEater {
         matrix[this.y][this.x] = 0
     }
 }
-class Predator {
+class Predator extends LivingCreature{
     constructor(x, y) {
-        this.x = x;
-        this.y = y;
+        super(x,y);
         this.energy = 600;
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x + 1, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x + 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-        ];
+
     }
     getNewCordinates(){
               this.directions = [
@@ -305,21 +292,10 @@ class Predator {
         }
     }
     
-    class Hunter {
+    class Hunter extends LivingCreature{
         constructor(x, y) {
-            this.x = x;
-            this.y = y;
+            super(x,y);
             this.ammo = 2000;
-            this.directions = [
-                [this.x - 1, this.y - 1],
-                [this.x, this.y - 1],
-                [this.x + 1, this.y - 1],
-                [this.x - 1, this.y],
-                [this.x + 1, this.y],
-                [this.x - 1, this.y + 1],
-                [this.x, this.y + 1],
-                [this.x + 1, this.y + 1]
-            ];
         }
         getNewCordinates(){
                   this.directions = [
@@ -433,21 +409,11 @@ class Predator {
                 matrix[this.y][this.x] = 0
             }
     }
-class Terrorist {
+class Terrorist extends LivingCreature{
     constructor(x,y){
-        this.x = x
-        this.y = y
+        super(x,y)
         this.weapon = 100;
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x + 1, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x + 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-        ];
+
     }
     getNewCordinates(){
               this.directions = [
@@ -569,21 +535,10 @@ class Terrorist {
             matrix[this.y][this.x] = 0
         }
 }
-class Police {
+class Police extends LivingCreature{
         constructor(x,y){
-            this.x = x
-            this.y = y
+            super(x,y)
             this.handcuffs = 400;
-            this.directions = [
-                [this.x - 1, this.y - 1],
-                [this.x, this.y - 1],
-                [this.x + 1, this.y - 1],
-                [this.x - 1, this.y],
-                [this.x + 1, this.y],
-                [this.x - 1, this.y + 1],
-                [this.x, this.y + 1],
-                [this.x + 1, this.y + 1]
-            ];
         }
         getNewCordinates(){
               this.directions = [
