@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- <p class="myClass" id="myId">P1</p>
+    <p class="myClass">P2</p>
+    <div class="myClass">Div</div>
+    <h1>H1</h1>
+    <button >Push Me</button> -->
+    <h1>Chat</h1>
+    <div id="chat">
+
+    </div>
+    <input type="text" id="message">
+    <br>
+    <button id="send">Send</button>
+</body>
+<script>
+    function main() {
+
+var socket = io();
+
+var chat = document.getElementById('#chat');
+
+var message = document.getElementById('#message');
+
+var send = document.getElementById('#send');
+
+function handleSubmit() {
+
+
+if (message.val != "") {
+
+socket.emit("send message", message.val);
+
+}
+
+}
+
+send.onclick = handleSubmit;
+function handlMessage() {
+    var p = document.createElement('p');
+    p.innerHTML = msg
+    chat.appendChild(p)
+    message.value
+}
+socket.on('display massage' , handlMessage)
+}
+window.onload = main;
+</script>
+<!-- <script src="script.js"></script> -->
+</html>
