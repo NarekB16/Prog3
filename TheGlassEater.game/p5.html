@@ -1,15 +1,85 @@
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="summer">
+         <img class="summerimg" id="Mysummer" src="https://hips.hearstapps.com/hmg-prod/images/beautiful-tropical-sunset-scenery-two-sun-beds-royalty-free-image-1595368231.jpg?resize=1200:*" alt="" srcset="">  
+        <img class="winter" id="MyWinter" src="https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/winter-sunset-Marina%20Zezelina-SS.jpeg?itok=mv07CRwx" alt="" srcset="">
+        </div>
+        <table>
+            <tr>
+              <th>Color</th>
+              <th>Name</th>
+              <th>Function</th>
+            <th>Mult</th>
+            <td>Status</td>
+            </tr>
+            <tr>
+              <td>Կանաչ</td>
+              <td>Խոտ</td>
+              <td>Բազմանում է</td>
+              <td>Բազմանում է 10 վարկյանը մեկ</td>
+              <td id="grass"></td>
+            </tr>
+            <tr>
+              <td>Դեղին</td>
+              <td>Խոտակեր</td>
+              <td>Ուտում է Խոտ</td>
+              <td>Բազմանում է 10 վարկյանը մեկ</td>
+              <td id="grasseater"></td>
+            </tr>
+            <tr>
+              <td>Կարմիր</td>
+              <td>Գիշատիչ</td>
+              <td>Ուտում Է խոտակերներին</td>
+              <td>Բազմանում է 5 վարկյանը մեկ</td>
+              <td id="predator"></td>
+            </tr>
+            <tr>
+              <td>Շականակագույն</td>
+              <td>Որսորդ</td>
+              <td>Սպանում է Գիշատիչներին</td>
+              <td>Կանչում է իր ընկերներին երբ փամփուշտը մոտենում է 0-ի</td>
+              <td id="hunter"></td>
+            </tr>
+            <tr>
+              <td>Մոխրագույն</td>
+              <td>Ահաբեկիչ</td>
+              <td>Ոչնչացնում է իր տարածքում գտնվող բոլոր կերպարներին</td>
+              <td>Կանչում է մեկ այլ զորք երբ զենքերը մոտենում է 0-ի</td>
+              <td id="terrorsit"></td>
+            </tr>
+            <tr>
+              <td>Կապույտ</td>
+              <td>Ոստիկան</td>
+              <td>Ձերբակալում է Ահաբեկիչներին</td>
+              <td>Կանչում է մեկ այլ ջոկատ երբ ձեռնաշղթաները մոտենում է 0-ի</td>
+            </tr>
+            <tr>
+            <td>Սև</td>
+            <td>Պայթուցիկ</td>
+            <td>Պայրեցնում է ամեն ինչ</td>
+            <td>-</td>
+            <td id="Bomb1"></td>
+            </tr>
+          </table>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
-    <script src="class.js"></script>
+     <script src="class.js"></script>
     <script src="p5.js"></script>
+    <script src="grass.js"></script>
+    <script src="grasseater.js"></script>
+    <script src="predator.js"></script>
+    <script src="hunter.js"></script>
+    <script src="terrorsit.js"></script>
+    <script src="police.js"></script>
+    <script src="bomb.js"></script> 
+    <script src="server.js"></script>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
 </body>
 </html>
